@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0A19EC2B362A490063BF16 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A19EB2B362A490063BF16 /* Service.swift */; };
 		1F48A5772B35BCDB006E5522 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F48A5762B35BCDB006E5522 /* AppDelegate.swift */; };
 		1F48A5792B35BCDB006E5522 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F48A5782B35BCDB006E5522 /* SceneDelegate.swift */; };
 		1F48A57B2B35BCDB006E5522 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F48A57A2B35BCDB006E5522 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F0A19EB2B362A490063BF16 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		1F48A5732B35BCDB006E5522 /* Skillbox-M18.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Skillbox-M18.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F48A5762B35BCDB006E5522 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F48A5782B35BCDB006E5522 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				1F48A5762B35BCDB006E5522 /* AppDelegate.swift */,
 				1F48A5782B35BCDB006E5522 /* SceneDelegate.swift */,
 				1F48A57A2B35BCDB006E5522 /* ViewController.swift */,
+				1F0A19EB2B362A490063BF16 /* Service.swift */,
 				1F48A57C2B35BCDB006E5522 /* Main.storyboard */,
 				1F48A57F2B35BCDC006E5522 /* Assets.xcassets */,
 				1F48A5812B35BCDC006E5522 /* LaunchScreen.storyboard */,
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F48A57B2B35BCDB006E5522 /* ViewController.swift in Sources */,
+				1F0A19EC2B362A490063BF16 /* Service.swift in Sources */,
 				1F48A5772B35BCDB006E5522 /* AppDelegate.swift in Sources */,
 				1F48A5792B35BCDB006E5522 /* SceneDelegate.swift in Sources */,
 			);

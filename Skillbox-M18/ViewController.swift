@@ -97,7 +97,11 @@ class ViewController: UIViewController {
 
     @objc private func action(sender: UIButton) {
         view.endEditing(true)
-        print("test, \(sender.tag)")
+        Service().loadWithURLSession(requestText: self.searchTextField.text ?? "") { result in
+            DispatchQueue.main.async {
+                self.resultTextView.text = result
+            }
+        }
     }
     
     @objc private func viewTapped() {
