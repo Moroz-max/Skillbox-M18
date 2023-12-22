@@ -38,8 +38,30 @@ struct Service {
     }
         
     
-    func loadWithAlamofire(requestText: String) {
-        
+    func loadWithAlamofire(requestText: String, completion: @escaping (_ result: String) -> ()) {
+        let headers: HTTPHeaders = [
+                "X-API-KEY": "5322aeb4-16a0-4aea-8856-a46b71258e52"
+            ]
+        AF.request("https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword=\(requestText)",headers: headers).response { response in
+            if response.error == nil {
+                debugPrint(response)
+                if let data = response.data {
+                    if let json = try? JSONSerialization.jsonObject(with: data) {
+                        print(json)
+                        if let string = String(data: data, encoding: String.Encoding.utf8) {
+                            completion(string)
+                        }
+                    } else {
+                        completion("Что-то пошло не так")
+                    }
+                } else {
+                    completion("Что то пошло не так")
+                }
+                
+            } else {
+                completion("Ошибка")
+            }
+        }
     }
     
 }

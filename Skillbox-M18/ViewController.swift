@@ -97,11 +97,20 @@ class ViewController: UIViewController {
 
     @objc private func action(sender: UIButton) {
         view.endEditing(true)
-        Service().loadWithURLSession(requestText: self.searchTextField.text ?? "") { result in
-            DispatchQueue.main.async {
-                self.resultTextView.text = result
+        if sender.tag == 0 {
+            Service().loadWithURLSession(requestText: self.searchTextField.text ?? "") { result in
+                DispatchQueue.main.async {
+                    self.resultTextView.text = result
+                }
+            }
+        } else {
+            Service().loadWithAlamofire(requestText: self.searchTextField.text ?? "") { result in
+                DispatchQueue.main.async {
+                    self.resultTextView.text = result
+                }
             }
         }
+        
     }
     
     @objc private func viewTapped() {
